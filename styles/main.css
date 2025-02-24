@@ -1,0 +1,89 @@
+/* Импорт стилей блоков */
+@import url('./blocks/header.css');
+@import url('./blocks/hero.css');
+@import url('./blocks/about.css');
+@import url('./blocks/services.css');
+@import url('./blocks/contacts.css');
+@import url('./blocks/footer.css');
+
+/* Общие стили */
+:root {
+    --primary-color: #2E5A35;
+    --text-color: #333;
+    --background-color: #fff;
+    --container-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Общие стили для кнопок */
+.button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #234429;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+.hero__container {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.hero__title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero__text {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+} 
